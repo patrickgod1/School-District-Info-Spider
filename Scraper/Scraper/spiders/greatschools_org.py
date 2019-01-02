@@ -7,9 +7,9 @@ import csv
 class GreatschoolsOrgSpider(scrapy.Spider):
     name = 'greatschools.org'
     allowed_domains = ['greatschools.org']
-    # start_urls = ['https://www.greatschools.org/schools/districts/California/CA/','https://www.greatschools.org/schools/districts/Alaska/AK/']
-    with open('states.csv') as csvFile:
-        start_urls = [f'https://www.greatschools.org/schools/districts/{state[0]}/{state[1]}/' for state in csv.reader(csvFile, delimiter=',')]
+    start_urls = ['https://www.greatschools.org/schools/districts/California/CA/']
+    # with open('states.csv') as csvFile:
+    #     start_urls = [f'https://www.greatschools.org/schools/districts/{state[0]}/{state[1]}/' for state in csv.reader(csvFile, delimiter=',')]
 
     # def createStateURL(self):
     #     with open('states.csv') as csvFile:
